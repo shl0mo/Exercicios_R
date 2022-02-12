@@ -105,3 +105,7 @@ fila
 pos_Russell <- fila == "Russell"
 which(pos_Russell, arr.ind=TRUE)
 
+# 7
+quantidade <- scan()
+preco <- scan()
+print(sum(quantidae * preco))
