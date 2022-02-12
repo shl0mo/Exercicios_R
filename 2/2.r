@@ -125,3 +125,45 @@ for (i in a) {
 b
 
 # 9
+vetor_A <- c(0, 1, 1, 1, 0, 1, 1, 1, 0)
+vetor_B <- c(0, 0, 7, 2, 5, 0, 3, 0, 0)
+A <- matrix(data = vetor_A, nrow = 3, ncol = 3)
+B <- matrix(data = vetor_B, nrow = 3, ncol = 3)
+## a)
+C = A*A - t(B) - (A + B)*(A - B)
+print(C)
+## b)
+D = solve(A)*B + solve(B)*A
+print(D)
+## c)
+print(det(A)*C + t(det(B)*D))
+## d)
+print(eigen(A))
+print(eigen(B))
+print(eigen(C))
+print(eigen(D))
+## e)
+pares_C <- C %% 2 == 0
+indices_C <- which(pares_C, arr.ind=TRUE)
+print(indices_C)
+for (i in 1:length(indices_C)) {
+	for (j in 1:length(indices_C[i])) {
+		if (indices_C[i][j] == TRUE) {
+			C[i][j] = 0
+		}
+	}
+}
+print(C)
+## f)
+impares_D <- D %% 2 != 0
+indices_D <- which(impares_D, arr.ind=TRUE)
+print(indices_D)
+for (i in 1:length(indices_D)) {
+	for (j in 1:length(indices_D[i])) {
+		if (indices_D[i][j] == TRUE) {
+			D[i][j] = 1
+		}
+	}
+}
+print(D)
+
