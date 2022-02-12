@@ -72,3 +72,13 @@ for (i in y) {
         print(i)
     }
 }
+
+
+# 5
+vetor <- numeric(0)
+for (i in c(1:100)) {
+    if (i %% 2 == 0 & i %% 3 == 0 & i %% 7 == 0) {
+    	vetor <- c(vetor, i)
+    }
+}
+vetor
