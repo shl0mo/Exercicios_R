@@ -105,7 +105,23 @@ fila
 pos_Russell <- fila == "Russell"
 which(pos_Russell, arr.ind=TRUE)
 
+
 # 7
 quantidade <- scan()
 preco <- scan()
 print(sum(quantidae * preco))
+
+
+# 8
+a <- scan()
+b <- numeric(0)
+for (i in a) {
+	if (i %% 2 == 0) {
+		b <- (b, i * 5)
+	} else {
+		b <- (b, i + 5)
+	}
+}
+b
+
+# 9
