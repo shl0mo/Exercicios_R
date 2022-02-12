@@ -82,3 +82,26 @@ for (i in c(1:100)) {
     }
 }
 vetor
+
+
+# 6
+fila <- c("Steve", "Russell", "Alison", "Liam")
+## a)
+fila <- c(fila, "Barry")
+## b)
+fila <- fila[! fila %in% c("Steve")]
+fila
+## c)
+fila <- append(fila, "Pam", after=0)
+fila
+## d)
+fila <- fila[! fila %in% "Barry"]
+fila
+## e)
+pos_Alison <- c(3)
+fila <- fila[-pos_Alison]
+fila
+## Posição de Russell
+pos_Russell <- fila == "Russell"
+which(pos_Russell, arr.ind=TRUE)
+
