@@ -167,3 +167,24 @@ for (i in 1:length(indices_D)) {
 }
 print(D)
 
+# 10
+I_10 = diag(rep(1, 10))
+for (i in 1:length(I_10)) {
+	for (j in 1:length(I_10[i])) {
+	    if (I_10[i][j] == 0) {
+	        I_10[i][j] = 5
+	    }
+	}
+}
+print(I_10)
+
+I_10 = diag(rep(1, 10))
+bol_0 <- I_10 == 0
+for (i in 1:length(bol_0)) {
+	for (j in 1:length(bol_0[i])) {
+	    if (bol_0[i][j] == TRUE) {
+	        I_10[i][j] = 5
+	    }
+	}
+}
+I_10
