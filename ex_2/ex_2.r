@@ -59,3 +59,11 @@ for (i in entrada) {
 	}
 }
 print(resultado)
+
+# 7
+x = scan()
+n = scan()
+while (n%%1 != 0 & n < 0) {
+	n = scan()
+}
+print(n)
