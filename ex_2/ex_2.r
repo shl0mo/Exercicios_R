@@ -61,9 +61,30 @@ for (i in entrada) {
 print(resultado)
 
 # 7
-x = scan()
-n = scan()
-while (n%%1 != 0 & n < 0) {
-	n = scan()
+#x = scan()
+#n = scan()
+#while (n%%1 != 0 & n < 0) {
+#	n = scan()
+#}
+#print(n)
+
+# 8
+altura_paulo = 1.50
+altura_joao = 1.10
+anos = 0
+while (altura_joao <= altura_paulo) {
+	altura_paulo = altura_paulo + 0.02
+	altura_joao = altura_joao + 0.03
+	anos = anos + 1
 }
-print(n)
+cm_paulo = (altura_paulo - 1.50)*100
+cm_joao = (altura_joao - 1.10)*100
+print(paste(c('Serao necessarios ', anos, ' anos para que Joao se torne mais alto que Paulo'), collapse = ''))
+print(paste(c('Alutura de Paulo ', altura_paulo), collapse = ''))
+print(paste(c('Altura de Joao ', altura_joao), collapse = ''))
+print(paste(c('Quantidade de centimetros que Paulo cresceu: ', cm_paulo, ' cm'), collapse = ''))
+print(paste(c('Quantidade de centimentros que Joao cresceu: ', cm_joao, ' cm'), collapse = ''))
+#print(paste(c('Serao necessarios ', anos, ' para que Joao seja maior que Paulo'), collapse = '')
+#print(paste(c('Paulo crescera ', (altura_paulo - 1.5), 'centimetros'), collapse = ''))
+#print(paste(c('Joao crescera ', (altura_joao - 1.1), 'centimetros'), collapse = ''))
+
