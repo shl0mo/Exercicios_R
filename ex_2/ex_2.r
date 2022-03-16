@@ -45,3 +45,17 @@ if (A_menor & B_menor & C_menor) {
 for (i in 1:100) {
     print(i)
 }
+
+# 6
+entrada = c(-2, 0.5, 3)
+resultado = numeric(0)
+for (i in entrada) {
+	if (i <= 0) {
+		resultado = c(resultado, (i**3)*(-1))
+	} else if (i >= 0 & i < 1) {
+		resultado = c(resultado, i**2)
+	} else {
+		resultado = c(resultado, sqrt(i))
+	}
+}
+print(resultado)
