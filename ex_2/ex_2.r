@@ -84,7 +84,19 @@ print(paste(c('Alutura de Paulo ', altura_paulo), collapse = ''))
 print(paste(c('Altura de Joao ', altura_joao), collapse = ''))
 print(paste(c('Quantidade de centimetros que Paulo cresceu: ', cm_paulo, ' cm'), collapse = ''))
 print(paste(c('Quantidade de centimentros que Joao cresceu: ', cm_joao, ' cm'), collapse = ''))
-#print(paste(c('Serao necessarios ', anos, ' para que Joao seja maior que Paulo'), collapse = '')
-#print(paste(c('Paulo crescera ', (altura_paulo - 1.5), 'centimetros'), collapse = ''))
-#print(paste(c('Joao crescera ', (altura_joao - 1.1), 'centimetros'), collapse = ''))
+
+# 9
+x = 0
+y = 0
+jogadas = 0
+while (x + y != 7 & x + y != 11) {
+	x = sample(1:6, size = 1)
+	y = sample(1:6, size = 1)
+	soma = x + y
+	print(paste('x', x))
+	print(paste('y', y))
+	print(paste('soma', soma))
+	jogadas = jogadas + 1
+}
+print(paste('Total de jogadas', jogadas))
 
