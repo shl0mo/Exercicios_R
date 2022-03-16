@@ -40,3 +40,8 @@ if (A_menor & B_menor & C_menor) {
 } else {
     print('Os lados A, B e C não compoem um triangulo')
 }
+
+# 5
+for (i in 1:100) {
+    print(i)
+}
