@@ -21,3 +21,22 @@ if (adequacao_peso <= 70) {
     estado_nutricional = 'Obesidade'
 }
 print(estado_nutricional)
+
+# 4
+A = 2
+B = 4
+C = 3
+A_menor = A < (B + C)
+B_menor = B < (A + C)
+C_menor = C < (B + A)
+if (A_menor & B_menor & C_menor) {
+    if (A == B & A == C) {
+        print('O triangulo e equilatero')
+    } else if ((A == B & A != C) | (A == C & A != B) | (B == C & B != A) ) {
+        print('O triangulo e isosceles')            
+    } else if (A != B & A != C & B != C) {
+        print('O triangulo e escaleno')
+    }
+} else {
+    print('Os lados A, B e C não compoem um triangulo')
+}
