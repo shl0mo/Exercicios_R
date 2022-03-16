@@ -100,3 +100,8 @@ while (x + y != 7 & x + y != 11) {
 }
 print(paste('Total de jogadas', jogadas))
 
+# 10
+area = function (base, altura) {
+	return(base * altura)
+}
+print(area(4, 4))
