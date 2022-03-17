@@ -123,3 +123,10 @@ moda = function (vetor) {
 	print(valores_unicos[match(max(vetor_ocorr), vetor_ocorr)])
 }
 apply(iris, 2, moda)
+
+# 15
+vetor = c(1, 1.1, 2, 2.1, 3, 3.1, 4, 4.1, 5, 5, 5)
+inteiro_positivo = function (i) {
+    return(ifelse(i%%1 == 0 & i > 0, TRUE, FALSE))
+}
+sapply(vetor, inteiro_positivo)
