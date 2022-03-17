@@ -1,7 +1,7 @@
 # 1
-a <- 1
-b <- 2
-c <- 3
+a = 1
+b = 2
+c = 3
 (a%%1==0 & b%%1==0 & c%%1==0) & (a!=b | a!=c)
 
 # 3
@@ -124,9 +124,22 @@ moda = function (vetor) {
 }
 apply(iris, 2, moda)
 
+
 # 15
 vetor = c(1, 1.1, 2, 2.1, 3, 3.1, 4, 4.1, 5, 5, 5)
 inteiro_positivo = function (i) {
     return(ifelse(i%%1 == 0 & i > 0, TRUE, FALSE))
 }
 sapply(vetor, inteiro_positivo)
+
+
+# 14
+vetor = c(1,3,4,6,7,8,10,12,3,24,5,12,37)
+coef_var = function(vetor) {
+	return(sd(vetor)/mean(vetor))
+}
+coef_var(vetor)
+sapply(iris[1],  coef_var)
+sapply(iris[2],  coef_var)
+sapply(iris[3],  coef_var)
+sapply(iris[4],  coef_var)
