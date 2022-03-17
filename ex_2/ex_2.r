@@ -107,6 +107,7 @@ area = function (base, altura) {
 print(area(4, 4))
 
 # 13
+vetor = c(1,1,2, 2,2,3,4,4,4,4)
 moda = function (vetor) {
     valores_unicos = unique(vetor)
 	vetor_ocorr = numeric(0)
@@ -121,3 +122,4 @@ moda = function (vetor) {
 	}
 	print(valores_unicos[match(max(vetor_ocorr), vetor_ocorr)])
 }
+apply(iris, 2, moda)
