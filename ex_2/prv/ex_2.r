@@ -16,9 +16,26 @@ matriz_unicos = matrizUnicos(matriz)
 for (i in matriz_unicos) {
     ocorrencias = 0
     for (j in matriz) {
-        if (i == j) {
+        if (i == j & (i != 5 & i != 6)) {
             ocorrencias = ocorrencias + 1
         }
     }
-    print(paste(c('Candidato: ',i,', votos: ', ocorrencias, ', porcentagam: ', ocorrencias/length(vetor)*100, '%'), collapse=''))
+    if (i != 5 & i != 6) {
+        print(paste(c('Candidato: ',i,', votos: ', ocorrencias, ', porcentagam: ', ocorrencias/length(vetor)*100, '%'), collapse=''))
+    }
+}
+
+#b)
+for (i in matriz_unicos) {
+    ocorrencias = 0
+    for (j in matriz) {
+        if (i == j & (i == 5 | i == 6)) {
+            ocorrencias = ocorrencias + 1
+        }
+    }
+    if (i == 5) {
+        print(paste(c('Nulos (',i,') - votos: ', ocorrencias, ', porcentagam: ', ocorrencias/length(vetor)*100, '%'), collapse=''))
+    } else if (i == 6) {
+        print(paste(c('Brancos (',i,') - votos: ', ocorrencias, ', porcentagam: ', ocorrencias/length(vetor)*100, '%'), collapse=''))
+    }
 }
