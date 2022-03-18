@@ -9,13 +9,13 @@ adequacao_peso = 90
 estado_nutricional = ''
 if (adequacao_peso <= 70) {
     estado_nutricional = 'Desnutricao Grave'
-} else if (adequacao_peso >= 70 & adequacao_peso < 80) {
+} else if (adequacao_peso > 70 & adequacao_peso <= 80) {
     estado_nutricional = 'Desnutricao Moderada'
-} else if (adequacao_peso >= 80 & adequacao_peso < 90) {
+} else if (adequacao_peso > 80 & adequacao_peso <= 90) {
     estado_nutricional = 'Desnutricao Leve'
-} else if (adequacao_peso >= 90 & adequacao_peso < 110) {
+} else if (adequacao_peso > 90 & adequacao_peso <= 110) {
     estado_nutricional = 'Eutrofia (Peso Ideal)'
-} else if (adequacao_peso >= 110 & adequacao_peso < 120) {
+} else if (adequacao_peso > 110 & adequacao_peso <= 120) {
     estado_nutricional = 'Sobrepeso'
 } else {
     estado_nutricional = 'Obesidade'
@@ -124,15 +124,6 @@ moda = function (vetor) {
 }
 apply(iris, 2, moda)
 
-
-# 15
-vetor = c(1, 1.1, 2, 2.1, 3, 3.1, 4, 4.1, 5, 5, 5)
-inteiro_positivo = function (i) {
-    return(ifelse(i%%1 == 0 & i > 0, TRUE, FALSE))
-}
-sapply(vetor, inteiro_positivo)
-
-
 # 14
 vetor = c(1,3,4,6,7,8,10,12,3,24,5,12,37)
 coef_var = function(vetor) {
@@ -143,3 +134,11 @@ sapply(iris[1],  coef_var)
 sapply(iris[2],  coef_var)
 sapply(iris[3],  coef_var)
 sapply(iris[4],  coef_var)
+
+# 15
+vetor = c(1, 1.1, 2, 2.1, 3, 3.1, 4, 4.1, 5, 5, 5)
+inteiro_positivo = function (i) {
+    return(ifelse(i%%1 == 0 & i > 0, TRUE, FALSE))
+}
+sapply(vetor, inteiro_positivo)
+
