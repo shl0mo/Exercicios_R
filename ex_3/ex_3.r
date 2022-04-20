@@ -4,8 +4,6 @@ especies = split(iris, 'Species')
 #comprimento = iris$Sepal.Length
 
 ## b)
-#especies.Sepal.Length
-#tapply(especies,'Species', summary('Sepal.Length'))
 nomes_colunas = names(iris)
 vetor_especies = unique(iris$Species)
 for (i in vetor_especies) {
@@ -15,3 +13,6 @@ for (i in vetor_especies) {
 	print(paste('Resumo - largura - ', i,':'))
 	print(summary(subset_especie$Sepal.Width))
 }
+
+# c)
+iris[order(iris$Species, iris$Sepal.Length, decreasing = TRUE), ]
