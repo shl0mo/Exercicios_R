@@ -20,8 +20,15 @@ iris[order(iris$Species, iris$Sepal.Length, decreasing = TRUE), ]
 ## d)
 nomes_colunas = names(iris)
 vetor_especies = unique(iris$Species)
+especie_maior_comprimento = ''
+comprimento = 0
 for (i in vetor_especies) {
 	subset_especie = subset(iris, Species == i)
-	print(paste('Maior comprimento para ', i))
-	print(max(subset_especie$Sepal.Length))
+	maior_comprimento = max(subset_especie$Sepal.Length)
+	print(paste('Maior comprimento para ', i, ':', maior_comprimento))
+	if (maior_comprimento > comprimento) {
+		comprimento = maior_comprimento
+		especie_maior_comprimento = i
+	}
 }
+print(paste('Espécie com maior comprimento', especie_maior_comprimento))
