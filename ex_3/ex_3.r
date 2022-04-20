@@ -54,9 +54,16 @@ resposta_c = write.table(dataframe_b, file='respostas.txt', append=TRUE, row.nam
 resposta_c = write.table(iris_ordem, file='respostas.txt', append=TRUE, row.names=FALSE, col.names=FALSE)
 resposta_d = write.table(dataframe_d, file='respostas.txt', append=TRUE, row.names=FALSE, col.names=FALSE)
 
-#resposta_d = write.table(dataframe_d, file='respostas.txt')
-
-print(dataframe_d)
 
 # 2
-## 
+library(lattice)
+## a)
+# 2
+library(lattice)
+## a)
+nomes_colunas = names(iris)
+vetor_especies = unique(iris$Species)
+for (i in vetor_especies) {
+	subset_especie = subset(iris, Species == i)
+	print(densityplot(subset_especie$Sepal.Length, xlab=paste("Comprimento de",i), main="Densidade dos comprimentos de pétala"))
+}
