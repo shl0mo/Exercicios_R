@@ -14,5 +14,14 @@ for (i in vetor_especies) {
 	print(summary(subset_especie$Sepal.Width))
 }
 
-# c)
+## c)
 iris[order(iris$Species, iris$Sepal.Length, decreasing = TRUE), ]
+
+## d)
+nomes_colunas = names(iris)
+vetor_especies = unique(iris$Species)
+for (i in vetor_especies) {
+	subset_especie = subset(iris, Species == i)
+	print(paste('Maior comprimento para ', i))
+	print(max(subset_especie$Sepal.Length))
+}
